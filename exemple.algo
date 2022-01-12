@@ -1,20 +1,30 @@
-    ALGORITHM chek
-    VAR
-    c,v, i: INTEGER
+ ALGORITHM algorithm_name
+ VAR
+     ha-tab:HASH_TABLE<INTEGER,INTEGER>
+     tab1,tab2;tableaux
+     con,somme; INTEGER
+ BEGIN
+    con:= INTEGER
+    FOR i FROM 1 TO tab2.lenght STEP 1  DO
+    ha-tab:=<tab[i],con>
         
-    BEGIN
-        write ("donner une chaine de caractere");
-        read (ch);
-        c:=0; v:=0; i:=1;
-        WHILE (ch[i] !=".") DO
-        IF  (ch[i]in [a..z, a..z]) THEN
-        c++
-            ELSE_IF (ch[i] in [A,E,I,O,U,Y,a,e,i,o,u,y]) THEN
-            v++
-            END IF
-            i++
-        END_WHILE
-        write ("la longeur de chaine et",i);
-        write ("le nombre de voyelle et",v);
-        write ("le nombre de caractere et",c);
-    END
+    END_FOR
+    FOR i FROM 1 TO tab2.length STEP 1  DO
+    IF (ha-tab.lookup == true) THEN
+    ha-tab:=<tab2[i],con+1>
+      
+        ELSE
+        ha-tab:=<tab2[i],con>
+            
+        END_IF
+   
+        
+    END_FOR
+    FOR i FROM 1 TO ha-tab STEP 1  DO
+        IF (ha-tab[i].value ==1) THEN
+        somme+=ha-tab[i]
+          
+        END_IF
+    END_FOR
+    write ("le somme est" ,comme)
+ END
